@@ -1,0 +1,738 @@
+/* ================================
+   إعدادات عامة للصفحة
+================================ */
+body {
+    background-color: #F4F7FB; /* خلفية هادئة */
+    color: #24324A; /* نص أزرق رمادي واضح */
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ================================
+   تنسيقات النافبار
+================================ */
+.navbar {
+    background: #F4F7FB !important;
+    border-bottom: 1px solid #D6E4F0;
+    transition: all 0.3s;
+}
+.navbar .navbar-brand {
+    color: #2563eb !important; /* أزرق متوسط */
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.navbar .navbar-brand img {
+    border-radius: 8px;
+}
+.navbar .nav-link {
+    color: #24324A !important;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #2563eb !important;
+}
+.navbar .btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+.navbar .btn:hover {
+    background: #1e40af;
+    color: #fff;
+}
+
+/* ================================
+   صندوق فورم التسجيل
+================================ */
+.form-container, .register-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid #D6E4F0;
+    animation: zoomIn 0.8s ease;
+}
+
+/* ================================
+   الأزرار الأساسية
+================================ */
+.btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #1e40af;
+    border-color: #1e40af;
+    color: #fff;
+    transform: scale(1.05);
+}
+.btn-outline-primary {
+    color: #2563eb;
+    border-color: #2563eb;
+    background: transparent;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* ================================
+   الليبلات الخاصة بالحقول
+================================ */
+.form-label {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* ================================
+   صفحة تسجيل الدخول
+================================ */
+.card {
+    border-radius: 15px;
+    border: 1px solid #D6E4F0;
+    animation: fadeInUp 1s ease;
+    background: #fff;
+}
+h2 {
+    font-size: 1.8rem;
+    color: #2563eb;
+}
+.btn-outline-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.3s;
+    border-radius: 8px;
+}
+.btn-outline-secondary:hover {
+    background-color: #e0e7ef;
+    color: #2563eb;
+    transform: translateY(-3px);
+}
+hr {
+    border: none;
+    height: 1px;
+    background: #e0e7ef;
+}
+a.text-muted:hover {
+    color: #2563eb !important;
+    text-decoration: underline;
+}
+
+/* ================================
+   صفحة الرئيسية (Index Page)
+================================ */
+/* قسم الهيرو */
+.hero-section {
+    min-height: 70vh;
+    background: linear-gradient(rgba(37,99,235,0.13), rgba(37,99,235,0.13)),
+                url('/images/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 10px 30px 10px;
+    flex-direction: column;
+    gap: 20px;
+}
+.hero-section h1 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #1e40af;
+    margin-bottom: 18px;
+    line-height: 1.3;
+    animation: slideDown 1s ease-in-out;
+}
+.hero-section p {
+    font-size: 1.15rem;
+    color: #24324A;
+    margin-bottom: 22px;
+    line-height: 1.7;
+    animation: fadeIn 2s ease-in;
+}
+
+/* البوكس بتاع المميزات */
+.feature-box {
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #D6E4F0;
+    transition: all 0.3s;
+    animation: zoomIn 1s ease;
+}
+.feature-box:hover {
+    transform: translateY(-8px) scale(1.03);
+    border-color: #2563eb;
+    background: #F4F7FB;
+}
+.feature-box i {
+    color: #2563eb;
+}
+
+/* ================================
+   صفحة الكورسات (Courses Page)
+================================ */
+.courses-header {
+    background: #F4F7FB;
+    border-radius: 12px;
+    padding: 40px 0 30px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #D6E4F0;
+}
+.courses-header h1 {
+    color: #1e40af;
+    font-weight: bold;
+}
+.courses-header p {
+    color: #24324A;
+    font-size: 1.1rem;
+}
+
+/* كارد الكورس */
+.course-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #D6E4F0;
+    transition: all 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.course-card:hover {
+    border-color: #2563eb;
+    transform: translateY(-6px) scale(1.02);
+}
+.course-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.course-card:hover .course-img {
+    transform: scale(1.04);
+}
+.course-content {
+    padding: 18px 14px;
+    flex: 1;
+}
+.course-content h5 {
+    color: #1e40af;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+}
+.course-content h5:hover {
+    color: #2563eb;
+}
+.course-content p {
+    color: #24324A;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.price {
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.course-card .btn {
+    border-radius: 8px;
+    font-size: 0.95rem;
+    padding: 4px 16px;
+    font-weight: bold;
+}
+.course-card .btn:hover {
+    background: #2563eb;
+    color: #fff;
+    border-color: #2563eb;
+}
+
+/* ================================
+   الفوتر
+================================ */
+footer {
+    background: #2563eb;
+    color: #fff;
+    font-size: 1rem;
+    padding: 24px 0 10px 0;
+    margin-top: 40px;
+}
+footer .social-icons a {
+    color: #e0e7ef;
+    margin: 0 8px;
+    transition: color 0.2s;
+}
+footer .social-icons a:hover {
+    color: #fff;
+}
+footer p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* ================================
+   صفحة من نحن (About Page)
+================================ */
+.about-hero-section {
+    background: #F4F7FB;
+    border-radius: 12px;
+    padding: 40px 0 30px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #D6E4F0;
+}
+.about-hero-section h1 {
+    color: #1e40af;
+    font-weight: bold;
+}
+.about-hero-section p {
+    color: #24324A;
+    font-size: 1.1rem;
+}
+section .img-fluid {
+    border-radius: 16px;
+    border: 1px solid #D6E4F0;
+    transition: transform 0.3s;
+}
+section .img-fluid:hover {
+    transform: scale(1.04);
+    border-color: #2563eb;
+}
+
+/* ================================
+   Responsive Design
+================================ */
+@media (max-width: 991px) {
+    .hero-section {
+        min-height: 55vh;
+        padding: 40px 5vw 20px 5vw;
+    }
+    .hero-section h1 {
+        font-size: 1.6rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .course-img {
+        height: 160px;
+    }
+    .about-hero-section,
+    .courses-header {
+        padding: 30px 0 20px 0;
+    }
+}
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 40vh;
+        padding: 25px 2vw 10px 2vw;
+        gap: 12px;
+    }
+    .hero-section h1 {
+        font-size: 1.1rem;
+    }
+    .hero-section p {
+        font-size: 0.93rem;
+    }
+    .course-img {
+        height: 120px;
+    }
+    .feature-box {
+        padding: 16px 8px;
+    }
+    .about-hero-section,
+    .courses-header {
+        padding: 18px 0 10px 0;
+    }
+    footer {
+        font-size: 0.9rem;
+        padding: 14px 0 6px 0;
+    }
+}
+
+/* ================================
+   أنيميشن (Keyframes)
+================================ */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.95);}
+    to { opacity: 1; transform: scale(1);}
+}
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37,99,235,0.10);}
+    70% { box-shadow: 0 0 0 10px rgba(37,99,235,0);}
+    100% { box-shadow: 0 0 0 0 rgba(37,99,235,0);}
+}
+
+
+/* تأثير hover للأيقونات */
+.social-icons a {
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* الفوتر */
+.footer-bg {
+  background-color: #0d6efd;
+}
+
+/* الفورم */
+#contactForm input, 
+#contactForm textarea {
+  border-radius: 10px;
+}
+
+
+/* ===============================
+   تحسينات عامة على الكورس ديتيلز
+   =============================== */
+
+/* تأثير hover على الأزرار */
+.btn-primary:hover,
+.btn-warning:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+}
+
+/* تحسين الروابط في الفوتر */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* الكارد الجانبي */
+.card img {
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+.card img:hover {
+    transform: scale(1.03);
+}
+
+/* الأكورديون */
+.accordion-button {
+    font-weight: 600;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #eaf3ff;
+    color: #0d6efd;
+}
+    
+/* هيدر صفحة الكورسات */
+.courses-header {
+  background: linear-gradient(to right, #0d6efd, #0a58ca);
+  color: #fff;
+}
+.courses-header p {
+  color: #e9ecef;
+}
+
+/* الكروت */
+.course-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.course-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.course-content h5 {
+  color: #0d6efd;
+}
+.price {
+  font-weight: bold;
+  color: #198754;
+}
+/* 🎨 هيرو */
+.hero-section {
+  background: url("../images/hero-bg.jpg") no-repeat center center/cover;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🟦 الكورسات */
+.course-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+  background: #fff;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.course-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.course-content h5 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.price {
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+/* ✅ مميزات */
+.feature-box {
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.feature-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* 🌐 الفوتر */
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* زر تسجيل الدخول */
+.btn-google {
+  border: 1px solid #ccc;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.btn-google:hover {
+  background: #f8f9fa;
+  transform: scale(1.02);
+}
+
+/* إدخال البيانات */
+input.form-control {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+/* الكارد */
+.card {
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* الكارد */
+.card {
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* أزرار */
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  transform: scale(1.02);
+}
+
+/* حقول الإدخال */
+input.form-control {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* ✅ كروت الإحصائيات */
+.stat-card {
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ✅ كروت الكورسات */
+.course-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* ✅ الفوتر */
+.footer {
+  background-color: #0d6efd;
+}
+.footer a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #ccc;
+}   
+
+
+/* Teacher Dashboard Styles */
+body {
+  background-color: #f9fafb;
+  font-family: 'Cairo', sans-serif;
+  color: #1f2937;
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 1rem 2rem;
+}
+
+.navbar-brand img {
+  margin-left: 0.5rem;
+}
+
+.navbar-brand span {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #2563eb !important;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #f97316 !important;
+}
+
+.btn-primary {
+  background-color: #f97316;
+  border-color: #f97316;
+}
+.btn-primary:hover {
+  background-color: #06b6d4;
+  border-color: #06b6d4;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card-title {
+  color: #2563eb;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #374151;
+}
+
+footer {
+  background-color: #f1f5f9;
+}
+
+
+/* ================================
+   تنسيقات لوحة تحكم الطالب
+================================ */
+.stat-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.course-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.footer {
+  background-color: #0d6efd;
+}
+.footer a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #ccc;
+}

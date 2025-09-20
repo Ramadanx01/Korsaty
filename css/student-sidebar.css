@@ -1,0 +1,7 @@
+.sidebar-wrapper {
+  background: linear-gradient(to bottom, #198754, #20c997) !important;
+}
+
+.stat-card.bg-success {
+  background: linear-gradient(135deg, #198754, #20c997) !important;
+}

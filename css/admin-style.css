@@ -1,0 +1,166 @@
+/* ================================
+   تنسيقات لوحة تحكم الأدمن الجانبية
+================================ */
+
+:root {
+  --primary-color: #2563EB;
+  --primary-dark: #1e40af;
+  --secondary-color: #F97316;
+  --dark-bg: #1F2937;
+  --light-bg: #F9FAFB;
+  --text-color: #1F2937;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+}
+
+/* ================================
+   الناف بار الجانبي (Sidebar)
+================================ */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* يبدأ مخفياً خارج الشاشة */
+    height: 100vh;
+    width: 250px;
+    background-color: var(--dark-bg);
+    padding: 2rem 1rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.toggled {
+    transform: translateX(-250px); /* ✅ هذا هو التغيير الصحيح */
+}
+
+.sidebar .nav-link {
+    color: #a0aec0;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateX(-5px);
+}
+.sidebar .nav-link.active {
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.sidebar .logo-container {
+    padding-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+.sidebar .logo-container img {
+    width: 60px;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+.profile-info {
+    color: #fff;
+    text-align: center;
+}
+.profile-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    margin-bottom: 10px;
+}
+.sidebar .logout-link {
+    color: #e53e3e;
+    text-decoration: none;
+    font-weight: 600;
+}
+.sidebar .logout-link:hover {
+    text-decoration: underline;
+}
+
+/* ================================
+   هيكل الصفحة
+================================ */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+.content-wrapper {
+    flex-grow: 1;
+    margin-right: 0; /* يبدأ بدون مسافة */
+    padding: 20px;
+    transition: margin-right 0.3s ease-in-out;
+}
+
+.content-wrapper.toggled {
+    margin-right: 250px;
+}
+
+.sidebar-toggle-btn {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 1060;
+    transition: all 0.3s ease-in-out;
+}
+
+/* تنسيقات الأزرار */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+/* تنسيقات الكروت الإحصائية */
+.stats-card {
+    border-radius: 12px;
+    color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+.bg-blue { background: linear-gradient(135deg, #2563EB, #1e40af); }
+.bg-orange { background: linear-gradient(135deg, #F97316, #c2410c); }
+.bg-green { background: linear-gradient(135deg, #10B981, #047857); }
+.bg-red { background: linear-gradient(135deg, #EF4444, #b91c1c); }
+
+/* تنسيقات الفوتر */
+.footer-bg {
+    background-color: var(--light-bg);
+    border-top: 1px solid #e5e7eb;
+}
